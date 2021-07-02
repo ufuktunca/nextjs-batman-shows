@@ -13,6 +13,7 @@ function ShowDetail(props) {
     if (id !== undefined) {
       setBatmanShowDetail(id);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (
@@ -24,7 +25,7 @@ function ShowDetail(props) {
         Back
       </button>
       <div className={styles.imageAndName}>
-        <img src={showDetail.image.medium} height="400px" />
+        <img src={showDetail.image.medium} height="400px" alt="show-cover" />
         <div className={styles.showName}>{showDetail.name}</div>
       </div>
       <div className={styles.showDetails}>

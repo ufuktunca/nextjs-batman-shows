@@ -6,7 +6,6 @@ import { getBatmanShows } from "./api/api";
 
 function Home(props) {
   const { fetchBatmanShows, shows, batmanShows } = props;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchBatmanShows(shows);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,7 +22,11 @@ function Home(props) {
         {batmanShows.map((show, index) => (
           <div key={index + show.show.name} className={styles.showRow}>
             <div className={styles.showImageAndName}>
-              <img src={show.show.image.medium} height="150px" />
+              <img
+                src={show.show.image.medium}
+                height="150px"
+                alt="show-covers"
+              />
               <div>{show.show.name}</div>
             </div>
             <div className={styles.rating}>
@@ -64,4 +67,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
-// eslint-disable-next-line react-hooks/exhaustive-deps
