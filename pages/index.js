@@ -9,6 +9,7 @@ function Home(props) {
 
   useEffect(() => {
     fetchBatmanShows(shows);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shows]);
 
   return (
