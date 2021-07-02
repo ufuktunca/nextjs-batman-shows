@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import styles from "../styles/Home.module.scss";
-import { fetchBatmanShows } from "./actions/showsActions";
+import { fetchBatmanShows } from "../actions/showsActions";
 import { connect } from "react-redux";
-import { getBatmanShows } from "./api/api";
+import { getBatmanShows } from "../api/api";
 import Image from "next/image";
 
 function Home(props) {
@@ -26,6 +26,7 @@ function Home(props) {
               <Image
                 src={show.show.image.medium}
                 height="150px"
+                width="150px"
                 alt="show-covers"
               />
               <div>{show.show.name}</div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { connect } from "react-redux";
-import { setBatmanShowDetail } from "../../actions/showDetailAction";
+import { setBatmanShowDetail } from "../../../actions/showDetailAction";
 import styles from "../../../styles/ShowDetail.module.scss";
 import Image from "next/image";
 
@@ -26,7 +26,12 @@ function ShowDetail(props) {
         Back
       </button>
       <div className={styles.imageAndName}>
-        <Image src={showDetail.image.medium} height="400px" alt="show-cover" />
+        <Image
+          src={showDetail.image.medium}
+          height="400px"
+          width="300px"
+          alt="show-cover"
+        />
         <div className={styles.showName}>{showDetail.name}</div>
       </div>
       <div className={styles.showDetails}>
