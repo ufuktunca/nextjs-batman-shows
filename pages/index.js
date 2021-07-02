@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.scss";
 import { fetchBatmanShows } from "./actions/showsActions";
 import { connect } from "react-redux";
 import { getBatmanShows } from "./api/api";
+import Image from "next/image";
 
 function Home(props) {
   const { fetchBatmanShows, shows, batmanShows } = props;
@@ -22,7 +23,7 @@ function Home(props) {
         {batmanShows.map((show, index) => (
           <div key={index + show.show.name} className={styles.showRow}>
             <div className={styles.showImageAndName}>
-              <img
+              <Image
                 src={show.show.image.medium}
                 height="150px"
                 alt="show-covers"

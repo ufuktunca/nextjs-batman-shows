@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { connect } from "react-redux";
 import { setBatmanShowDetail } from "../../actions/showDetailAction";
 import styles from "../../../styles/ShowDetail.module.scss";
+import Image from "next/image";
 
 function ShowDetail(props) {
   const router = useRouter();
@@ -25,7 +26,7 @@ function ShowDetail(props) {
         Back
       </button>
       <div className={styles.imageAndName}>
-        <img src={showDetail.image.medium} height="400px" alt="show-cover" />
+        <Image src={showDetail.image.medium} height="400px" alt="show-cover" />
         <div className={styles.showName}>{showDetail.name}</div>
       </div>
       <div className={styles.showDetails}>
