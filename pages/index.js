@@ -6,7 +6,7 @@ import { getBatmanShows } from "./api/api";
 
 function Home(props) {
   const { fetchBatmanShows, shows, batmanShows } = props;
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchBatmanShows(shows);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,3 +64,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
+// eslint-disable-next-line react-hooks/exhaustive-deps
