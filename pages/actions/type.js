@@ -1,0 +1,2 @@
+export const FETCH_SHOWS = "FETCH_SHOWS";
+export const SET_BATMAN_SHOW_DETAIL = "SET_BATMAN_SHOW_DETAIL";
